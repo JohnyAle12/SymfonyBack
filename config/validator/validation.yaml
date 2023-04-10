@@ -1,0 +1,16 @@
+App\Entity\User:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                min: 3
+                max: 225
+                minMessage: 'Your name must be at least {{ limit }} characters long'
+                maxMessage: 'Your name cannot be longer than {{ limit }} characters'
+        email:
+            - NotBlank: ~
+        password:
+            - NotBlank: ~
+            - Length:
+                min: 8
+                minMessage: 'Your password must be at least {{ limit }} characters long'
